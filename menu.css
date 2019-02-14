@@ -1,0 +1,83 @@
+body{ margin: 0; }
+
+
+header {      
+    height: 10%;     
+}
+header .title{
+    float: left;
+    width: 33%;
+    height: 100%;
+    border: 1px solid black;
+    
+}
+header .ad{
+    float: left;    
+    width: 33%;
+    height: 100%;
+    border: 1px solid black;
+    
+}
+header .search{
+    float: left;    
+    width:33%;
+    height: 100%;
+    border: 1px solid black;
+    
+}
+
+.sidenav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #f1f1f1;
+  position: relative;
+  height: 90%;
+  overflow: auto;
+  float:left;
+}
+
+.sidenav li a {
+    display: block;
+    color:  #000;
+    padding: 50px 50px;
+    text-decoration: none;   
+}
+
+.sidenav li a:hover, .dropdown-content a:hover{
+    background-color: #555;
+    color: white;
+}
+.dropdown-content {
+    display: none;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+
+div.content{
+    position: relative;
+    float: right;
+    width:80%;
+    height: 90%;
+    background-image: url("maindog.jpg");
+}
+
+div.content p {
+    color : white;
+    text-align: center;
+    padding: 150px 10px 150px 10px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.content h1{
+    color : white;
+    text-align: center;
+    padding: 150px 10px 150px 10px;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
