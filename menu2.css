@@ -25,47 +25,22 @@ header .search{
     border: 1px solid black;
     
 }
-
-.sidenav{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 15%;
-  background-color: mintcream;
-  position: relative;
-  height: 90%;
-  overflow: auto;
-  float:left;
-}
-
-.sidenav li a {
+.menu {
     position: relative;
-    display: block;
-    color:  #000;
-    padding: 40px 40px;
-    text-decoration: none;
-    border: 1px solid whitesmoke;   
+    float: left;
+    width: 20%;
+    height: 90%;
+    font-size: 16px;
+}
+.menu ul {
+    list-style-type: none;
 }
 
-.sidenav li a:hover, .dropdown-content a:hover{
-    background-color: #555;
-    color: white;
-}
-.dropdown-content {
-    display: none;
-}
-.dropdown-content a{
-    display: block;
-    padding: 20px 20px;
-}
 
-.dropdown:hover .dropdown-content{
-    display: block;
-}
 div.main{
     position: relative;
     float: right;
-    width: 85%;
+    width: 80%;
     height: 90%;
     background-image: url("maindog.jpg");
 }
