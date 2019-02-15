@@ -36,19 +36,16 @@ header {
     padding: 5px;
     background-color: blanchedalmond;
     border: 3px solid white;
+    overflow: hidden;
 }
-.sidemenu .row {
+.sidemenu div {
     width: 100%;
     position: relative;
     overflow: hidden;
     border: 1px solid whitesmoke;
 }
-.sidemenu .row input {
-    display: none;
-}
-.sidemenu .row .menu-tltle {
-    display: block;
-}
+.sidemenu 
+
 
 
 .content {
