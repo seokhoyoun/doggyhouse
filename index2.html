@@ -1,42 +1,65 @@
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="menu2.css">
-    </head>
-    <body>
-        <header>
-            <div class="title"><h1>doggyhouse</h1></div>
-            <div class="ad"></div>
-            <div class="search"></div>          
-        </header>
-    <section class="menu">
-           <ul>
-               <li>
-                   <input type="checkbox" id="checkbox-1" name="checkbox-menu">
-                   <label for="checkbox-1">Find a host</label>
-                <div class="dropdown-content">
-                    <a href="">menu1</a>
-                    <a href="">menu2</a>
-                    <a href="">menu3</a>
-                </div>
-            </li>
-            <li><a href="">Register a host</a></li>
-            <li><a href="">Board</a></li>
-            <li><a href="">Sign in</a></li>
-            <li><a href="">About us</a></li>
-        </ul>
-    </section> 
-    
-        <div class="main">
-            <h1>Hello World!!</h1>
-            <br>
-            <p>지난 1일, 초콜릿 메이커 고유림(32)·윤형원(37) 부부가 운영하는 ‘카카오다다’를 찾아갔다. 초콜릿 공장답게 달콤한 냄새가 풍겼다. 
-                일반 초콜릿 가게에서도 이런 향은 맡을 수 있다. 차이가 있다면 이곳에는 새콤한 과일류의 향이 섞여 있다는 것. 카카오 빈(콩)을 가공하는 냄새다.
-                2011년부터 카카오 빈을 가공해 직접 초콜릿을 만들어온 두 사람은 2016년, 서울 마포구 망원동에 ‘빈 투 바’로만 만드는 초콜릿을 파는 전문점을 열었다.
-                쇼콜라티에와 초콜릿 메이커는 초콜릿을 만드는 일을 전문으로 하는 사람을 뜻한다.
-                쇼콜라티에가 ‘커버추어 초콜릿’(카카오 버터 함량이 30~35% 이상인 초콜릿)을 이용해 다양한 초콜릿 디저트를 만드는 일을 주로 한다면, 
-                초콜릿 메이커는 카카오 빈을 로스팅하고 카카오닙스를 부수고 으깨는 과정을 거쳐 초콜릿을 만든다. 쉽게 말해, 쇼콜라티에는 초콜릿을 재료로 쓰고, 
-                초콜릿 메이커는 카카오 빈을 재료로 삼는다.“</p>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu2.css">
+</head>
+<body>
+    <div class="container">
+        <header><h1>doggyhouse</h1></header>
+        <section class="search">search bar</section>
+        <section class="sidemenu">
+            <div class="row">
+                <input id="tab1" type="radio" name="tabs">
+                <label for="tab1" class="menu-title">호스트 찾기</label>
+                    <div class="menu-content"><ul>
+                        <li>1111</li>
+                        <li>2222</li>
+                        <li>3333</li>
+                    </ul></div>
+            </div>
+            <div class="row">
+                <input id="tab2" type="radio" name="tabs">
+                <label for="tab2" class="menu-title">호스트 등록</label>
+                    <div class="menu-content"><ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul></div>
+            </div>
+            <div class="row">
+                <input id="tab3" type="radio" name="tabs">
+                <label for="tab3" class="menu-title">게시판</label>
+                    <div class="menu-content"><ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul></div>
+            </div>
+            <div class="row">
+                <input id="tab4" type="radio" name="tabs">
+                <label for="tab4" class="menu-title">로그인/회원가입</label>
+                    <div class="menu-content"><ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul></div>
+            </div>
+            <div class="row">
+                <input id="tab5" type="radio" name="tabs">
+                <label for="tab5" class="menu-title">About us</label>
+                    <div class="menu-content"><ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul></div>
+            </div>
+        </section>
+        <section class="content">content</section>
+        <footer>footer</footer>
+    </div>
+</body>
 </html>
