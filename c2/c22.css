@@ -22,10 +22,27 @@ header {
     padding:var(--padding);
     /* margin-bottom: 50px; */
 }
+
 main {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
+.top_menu {
+    grid-column: 1 / 6;
+    float: grid;
+}
+.top_menu ul {
+    list-style-type: none;
+}
+
+.top_menu ul li {
+    float: right;
+    margin: 10px;
+}
+.top_menu ul li a {
+    text-decoration: none;
+}
+
 .navigation {
     margin-bottom: 50px;
     padding:var(--padding);
@@ -132,6 +149,7 @@ main {
     align-items: flex-end;
     color:white;
     padding: 20px;
+    margin : 10px;
     margin-bottom: 20px;
     justify-content: space-between;
     background-size: cover;
