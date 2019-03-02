@@ -28,3 +28,17 @@ let toggleNav = function(){
         toggleNavStatus = false;
     }
 }
+
+const loginBtn = document.querySelector('#loginBtn');
+const loginBox = document.querySelector('.login-box');
+
+loginBtn.addEventListener('click',popUpLoginBox);
+
+function popUpLoginBox(){
+    loginBox.style.display = "block";
+}
+
+const xBtn = document.querySelector('.close');
+xBtn.addEventListener('click', function(){
+    loginBox.style.display = "none";
+});
