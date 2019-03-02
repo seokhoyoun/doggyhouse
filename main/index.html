@@ -12,15 +12,33 @@
 <body>
 
     <header class="header">
-        <div class="header__square">● ● ●</div>
-        <ul>
-            <li><a href="">로그인</a></li>
-            <li><a href="">회원가입</a></li>
-            <li><a href="">아이디/비밀번호 찾기</a></li>
-        </ul>
+        <div class="header__square" onclick="toggleNav()">● ● ●</div>
+        <div class="header__topbar">
+            <ul>
+                <li><a href="">도그하우스 소개</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">1:1 문의하기</a></li>
+                <li><a href="">이용 방법</a></li>
+            </ul>
+            <ul>
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+                <li><a href="">아이디 비밀번호 찾기</a></li>
+            </ul>
+        </div>
     </header>
 
     <main class="main">
+        <aside class="nav-sidebar">
+            <ul>
+                <li><span>펫시터 찾기</span></li>
+                <li><a href=""> 펫시터 등록 </a></li>
+                <li><a href="">자유게시판</a></li>
+                <li><a href="">팁 게시판</a></li>
+                <li><a href="">공지사항</a> </li>
+                <li><a href="">마이페이지</a> </li>
+            </ul>
+        </aside>
         <div class="main__info">
             <hgroup class="main__titles">
                 <h6 class="main__pre-title">The grand moment</h6>
@@ -36,7 +54,7 @@
                 <span class="navigation__arrow">→</span></div>
         </div>
     </main>
-
+    <script src="main.js"></script>
 </body>
 
 </html>
