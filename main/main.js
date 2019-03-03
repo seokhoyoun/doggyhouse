@@ -30,7 +30,9 @@ let toggleNav = function(){
 }
 
 const loginBtn = document.querySelector('#loginBtn');
+const registerBtn = document.querySelector('#registerBtn');
 const loginBox = document.querySelector('.login-box');
+const registerBox = document.querySelector('.register-box');
 
 loginBtn.addEventListener('click',popUpLoginBox);
 
@@ -38,7 +40,16 @@ function popUpLoginBox(){
     loginBox.style.display = "block";
 }
 
-const xBtn = document.querySelector('.close');
-xBtn.addEventListener('click', function(){
-    loginBox.style.display = "none";
-});
+registerBtn.addEventListener('click', function(){
+    registerBox.style.display = "flex";
+})
+
+const xBtns = document.querySelectorAll('.close');
+for(let i = 0; i < xBtns.length; i++){
+    xBtns[i].addEventListener('click', function(){
+        this.parentNode.style.display = "none";
+    });
+}
+
+
+
