@@ -17,7 +17,7 @@ let toggleNav = function(){
         }
         toggleNavStatus = true;
     } else {
-        getSidebar.style.width = "80px";
+        getSidebar.style.width = "79px";
         getSidebarTitle.style.opacity = "0"; 
         
         let arrayLength = getSidebarLinks.length;
