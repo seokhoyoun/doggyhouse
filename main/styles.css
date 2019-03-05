@@ -100,7 +100,7 @@ body {
   width: 79px;
   padding: 0 5px;
   height: calc(100vh - 80px);
-  background-color: #c8d6e5;
+  background-color: #9AECDB;
   transition: all 0.3s linear;
 }
 
@@ -222,7 +222,7 @@ body {
   position: absolute;
   right: 25px;
   top: 0;
-  color: #1c8adb;
+  color: #00b894;
   font-size: 35px;
   font-weight: bold;
   cursor: pointer;
@@ -250,20 +250,22 @@ input[type="text"], input[type="password"],input[type="number"],input[type="tel"
   font-size: 16px;
 }
 
-.login-box input[type="submit"]
+.login-box #btn-submit
 {
   border: none;
   outline: none;
+  width: 300px;
   height: 40px;
-  background: #1c8adb;
+  background: #58B19F;
   color: #fff;
   font-size: 18px;
   border-radius: 20px;
+  margin-bottom: 10px;
 }
-.login-box input[type="submit"]:hover
+.login-box #btn-submit:hover
 {
   cursor: pointer;
-  background: #39dc79;
+  opacity: 0.7;
   color: #000;
 }
 
@@ -276,16 +278,29 @@ input[type="text"], input[type="password"],input[type="number"],input[type="tel"
 {
   color: #39dc79;
 }
+.login-box #form-messages{
+  background-color: rgb(255,232,232, 0.8);
+  border: 1px solid red;
+  color: red;
+  display: none;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  max-width: 300px;
+  border-radius: 10px;
+}
 
 .register-box{
   display: none;
-  width: 400px;
-  height: 770px;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 500px;
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   top: 15%;
-  left: 57%;
+  left: 47%;
   position: absolute;
   z-index: 1;
   padding: 10px 30px;
@@ -302,4 +317,21 @@ input[type="text"], input[type="password"],input[type="number"],input[type="tel"
 }
 .register-box input[type="submit"]:hover{
   opacity: 0.6;
+}
+.register-box .reg1 {
+	float:left;
+}
+
+.register-box .reg2 {
+	float:left;
+	margin-left : 50px;
+}
+
+.register-box #checkIdBtn {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  border:none;
+  width: 80%;
+  margin-left: 20px;
 }

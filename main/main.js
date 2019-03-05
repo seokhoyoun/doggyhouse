@@ -51,5 +51,38 @@ for(let i = 0; i < xBtns.length; i++){
     });
 }
 
+const form = {
+    userid: document.getElementById('userid'),
+    password: document.getElementById('userpwd'),
+    submit: document.getElementById('btn-submit'),
+    messages: document.getElementById('form-messages')
+}
 
+form.submit.addEventListener('click',(e) =>{
+    e.preventDefault();
+    const request = new XMLHttpRequest();
 
+    request.onload = () => {
+        let responseObj = null;
+
+        try {
+            responseObj = JSON.parse(request.responseText);
+
+        } catch (e) {
+            console.error('Could not parse JSON!');
+        }
+
+        if (responseObj) {
+            handleResponse(responseObj);
+        }
+    }
+    const requestData = 'userid='+encodeURIComponent(form.userid.value)+'&'+'password='+encodeURIComponent(form.password.value);
+    console.log(requestData);
+    request.open('POST','/testh/check');
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    request.send(requestData);
+});
+
+function handleResponse(responseObj){
+    console.log(responseObj);
+}
