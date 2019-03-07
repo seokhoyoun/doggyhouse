@@ -65,24 +65,76 @@ form.submit.addEventListener('click',(e) =>{
     request.onload = () => {
         let responseObj = null;
 
-        try {
-            responseObj = JSON.parse(request.responseText);
-
-        } catch (e) {
-            console.error('Could not parse JSON!');
-        }
+        responseObj = request.responseText;
 
         if (responseObj) {
             handleResponse(responseObj);
         }
     }
+//		    const requestData = 'userid='+form.userid.value+'&'+'password='+form.password.value;
     const requestData = 'userid='+encodeURIComponent(form.userid.value)+'&'+'password='+encodeURIComponent(form.password.value);
     console.log(requestData);
-    request.open('POST','/testh/check');
+    request.open('POST','/testh/login');
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     request.send(requestData);
 });
 
 function handleResponse(responseObj){
-    console.log(responseObj);
+    if(responseObj === 'ok'){
+        location.href = '/testh/index.jsp';
+    } else{
+        while(form.messages.firstChild){
+            form.messages.removeChild(form.messages.firstChild);
+        }
+        const li = document.createElement('li');
+        li.textContent = responseObj;
+        form.messages.appendChild(li);
+    }
+    form.messages.style.display = "block";
+}
+
+const rform = {
+    userid: document.forms['rform']['userid']
+}
+
+const messages = {
+    id: document.getElementById('reg-check-id')
+}
+
+rform.userid.addEventListener('keyup', () =>{
+    if(rform.userid.value === ''){
+        handleMessages('아이디를 입력해주세요');
+    } else if (rform.userid.value.length < 4 || rform.userid.value.length > 12) {
+        handleMessages('아이디는 4 ~ 12자 이내로 만들어주세요');
+    } else if (!/^[A-Za-z0-9]$/.test(rform.userid.value)){
+        handleMessages('영문자와 숫자만 사용 가능합니다.');
+    } else {
+        const request = new XMLHttpRequest();
+
+        request.onload = function(){
+            let response = request.responseText;
+
+            if(response){
+                handleMessages(response);
+            }
+        }
+        const requestData = 'userid='+encodeURIComponent(rform.userid.value);
+        request.open('POST', 'testh/chkid');
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        request.send(requestData);
+    }
+});
+
+function handleMessages(m){
+    if(m === 'ok'){
+
+    } else {
+        while(messages.id.firstChild){
+            messages.id.removeChild(messages.id.firstChild);
+        }
+        const li = document.createElement('li');
+        li.textContent = m;
+        messages.id.appendChild(li);
+    }
+    messages.id.style.display = "block";
 }

@@ -63,41 +63,43 @@
             <img src="usericon.png" class="avatar">
             <span class="close">x</span>
             <h1>Login Here</h1>
-            <form action="/testh/login" method="POST">
+            <form action="/testh/login" method="POST" autocomplete="off">
                 <p>User ID</p>
                 <input type="text" name="userid" id="userid" placeholder="아이디 입력">
                 <p>Password</p>
                 <input type="password" name="userpwd" id="userpwd" placeholder="비밀번호 입력">
                 <button type="submit" id="btn-submit">Login</button>
                 <ul id="form-messages">
-<<<<<<< HEAD
                 </ul>
                 <hr>
-=======
-                    <li>아이디 입력 오류</li>
-                </ul>
->>>>>>> 0dada4d10348a40763814bc0ec3ae51dcd5d1417
                 <a href="#">Forget Password</a>
             </form>
         </div>
         <div class="register-box">
             <span class="close">x</span>
-<<<<<<< HEAD
-            <form action="/testh/minsert" method="POST">
+            <form action="/testh/minsert" method="POST" autocomplete="off" name="rform">
             <div class="reg1">
                 <p>User ID</p>
                 <input type="text" name="userid" placeholder="아이디 입력" required>&nbsp;
                 <!-- <input type="submit" name="submit" value="Check ID"> -->
-                <ul id="reg-check-id">
+                <ul id="reg-check-id" class="error-messages">
                     <li>아이디가 이미 사용중입니다.</li>
                 </ul>
-                
                 <p>Password</p>
                 <input type="password" name="userpwd" placeholder="비밀번호 입력" required>
+                <ul class="error-messages">
+                    <li>text error!</li>
+                </ul>
                 <p>Repeat Password </p>
                 <input type="password" name="userpwd2" placeholder="비밀번호 확인" required>
+                <ul class="error-messages">
+                    <li>text error!</li>
+                </ul>
                 <p>Name</p>
                 <input type="text" name="username" placeholder="이름 입력" required>
+                <ul class="error-messages">
+                    <li>text error!</li>
+                </ul>
                 <p>Gender</p>
                 <input type="radio" name="gender" value="M" checked> 남자
                         &nbsp; <input type="radio" name="gender" value="F"> 여자
@@ -105,10 +107,16 @@
             <div class="reg2">
                 <p>Age</p>
                 <input type="number" name="age" min="0" max="100" required placeholder="나이" >
+                <ul class="error-messages">
+                    <li>text error!</li>
+                </ul>
                 <p>Phone</p>
                 <input type="tel" name="phone" placeholder="핸드폰" required>
+                <ul class="error-messages">
+                    <li>text error!</li>
+                </ul>
                 <p>Email</p>
-                <input type="email" name="email" placeholder="이메일" required>&nbsp;
+                <input type="email" name="email" placeholder="이메일" >&nbsp;
                 <p>Interests</p>
                 <input type="checkbox" name="hobby" value="game">게임
                 <input type="checkbox" name="hobby" value="music">음악
@@ -118,43 +126,6 @@
                 <hr>
                 <input type="submit" id="reg-submit" value="가입하기">
             </div>
-=======
-            <form action="" method="POST">
-                <div class="reg1">
-                    <p>User ID</p>
-                    <input type="text" name="userid" placeholder="아이디 입력"  width="10px">&nbsp;
-                    <!-- <input type="submit" name="submit" value="Check ID"> -->
-                    <br>
-                    <button id="checkIdBtn">Check ID</button>
-                    <p>Password</p>
-                    <input type="password" name="userpwd" placeholder="비밀번호 입력" required>
-                    <p>Repeat Password </p>
-                    <input type="password" name="userpwd2" placeholder="비밀번호 확인" required>
-                    <p>Name</p>
-                    <input type="text" name="username" placeholder="이름 입력" required>
-                    <p>Gender</p>
-                    <input type="radio" name="gender" value="M"> 남자
-                            &nbsp; <input type="radio" name="gender" value="F"> 여자
-                </div>
-                <div class="reg2">
-                    <p>Age</p>
-                    <input type="number" name="age" min="0" max="100" required placeholder="나이" >
-                    <p>Phone</p>
-                    <input type="tel" name="phone" placeholder="핸드폰" required>
-                    <p>Email</p>
-                    <input type="email" name="email" placeholder="이메일" required>&nbsp;
-                    <p>Interests</p>
-                    <input type="checkbox" name="hobby" value="game">게임
-                    <input type="checkbox" name="hobby" value="music">음악
-                    <input type="checkbox" name="hobby" value="read">독서
-                    <input type="checkbox" name="hobby" value="sports">운동
-                    <input type="checkbox" name="hobby" value="trip">여행
-                    <hr>
-                    <input type="submit" value="가입하기">
-                </div>
->>>>>>> 0dada4d10348a40763814bc0ec3ae51dcd5d1417
-            </form>
-        </div>
     </main>
     <script src="main.js"></script>
 </body>
