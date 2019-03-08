@@ -109,7 +109,7 @@ rform.userpwd.addEventListener('keyup', () =>{
     let text = null;
     if(rform.userpwd.value === ''){
         text = '비밀번호를 입력해주세요';
-    } else if (!/^[]/)
+    } 
 });
 
 rform.userid.addEventListener('keyup', () =>{
